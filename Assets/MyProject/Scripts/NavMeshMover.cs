@@ -3,10 +3,15 @@ using UnityEngine.AI;
 
 public class NavMeshMover : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent  _agent; 
-    [SerializeField] private Animator      _animator;
-    
+    private NavMeshAgent  _agent; 
+    private Animator      _animator;
     public float RemainingDistance => _agent.remainingDistance;
+
+    void Start()
+    {
+        _agent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
+    }
 
     public void MoveTo(Vector3 position, float velocity = 1f)
     {

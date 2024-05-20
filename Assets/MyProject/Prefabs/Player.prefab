@@ -1751,11 +1751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c2ca07b8a2ea04eb1f94db8e1253ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _controller: {fileID: 2023145936827790518}
-  _animator: {fileID: 8656886002612397952}
-  speed: 40
-  acceleration: 0.05
-  deacceleration: 0.15
+  _data: {fileID: 11400000, guid: 08e342af8adcb7547bbfccabc6ecdc6c, type: 2}
 --- !u!114 &8105890230958616646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1781,7 +1777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08fd1bf05a9d1a64f9de47de07fb5033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 8656886002612397952}
   _attackMask:
     serializedVersion: 2
     m_Bits: 128

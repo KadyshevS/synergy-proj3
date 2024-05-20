@@ -12,11 +12,11 @@ public class Attacker : MonoBehaviour
             transform.right.normalized * _weapon.AttackRangeOffset.x, 
             _weapon.AttackRange, _attackMask);
 
-    [SerializeField] private Animator   _animator; 
     [SerializeField] private LayerMask  _attackMask;
     [SerializeField] private Weapon     _weapon;
     [SerializeField] private GameObject _hand;
 
+    private Animator   _animator; 
     private int        _attackIndex;
     private float      _attackTimer;
     private float      _attackingTimer;
@@ -29,6 +29,7 @@ public class Attacker : MonoBehaviour
     {
         ResetAttackTimer();
         _hits = new Collider[3];
+        _animator = GetComponent<Animator>();
 
         var pref = _weapon.Prefab;
         Instantiate(pref, _hand.transform);
